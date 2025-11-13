@@ -78,8 +78,8 @@ npx hardhat verify --network bscTestnet <CONTRACT_ADDRESS>
 
 1. **Buyer creates order** → Funds locked in escrow
 2. **Seller marks shipped** → 14-day timer starts
-3. **Buyer confirms delivery** → Funds released (minus 2.5% fee)
-4. **OR auto-complete** → After 14 days, anyone can trigger release
+3. **Buyer confirms delivery** → Funds released (minus 5% fee)
+4. **OR auto-complete** → After 7 days, anyone can trigger release
 5. **OR dispute** → Owner resolves after 7 days
 
 ## Network Details
@@ -111,9 +111,6 @@ npx hardhat verify --network bscTestnet <CONTRACT_ADDRESS>
 npx hardhat test
 ```
 
-## Before Mainnet
-
-⚠️ **Strongly recommended**: Get a professional audit before deploying to mainnet with real funds.
 
 ## License
 

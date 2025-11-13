@@ -21,10 +21,10 @@ contract GonanaEscrow is ReentrancyGuard, Pausable, Ownable {
     mapping(uint256 => Order) public orders;
     uint256 public orderCount;
     
-    uint256 public platformFee = 250; // 2.5% (basis points)
+    uint256 public platformFee = 500; // 2.5% (basis points)
     uint256 public constant MAX_FEE = 1000; // 10% max
     uint256 public constant DISPUTE_PERIOD = 7 days;
-    uint256 public constant AUTO_COMPLETE_PERIOD = 14 days;
+    uint256 public constant AUTO_COMPLETE_PERIOD = 7 days;
     
     event OrderCreated(uint256 indexed orderId, address indexed buyer, address indexed seller, uint256 amount);
     event OrderShipped(uint256 indexed orderId);
