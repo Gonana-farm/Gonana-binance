@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
+import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
+import "@openzeppelin/contracts/utils/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract GonanaEscrow is ReentrancyGuard, Pausable, Ownable {
@@ -21,7 +21,7 @@ contract GonanaEscrow is ReentrancyGuard, Pausable, Ownable {
     mapping(uint256 => Order) public orders;
     uint256 public orderCount;
     
-    uint256 public platformFee = 500; // 2.5% (basis points)
+    uint256 public platformFee = 500; // 5% (basis points)
     uint256 public constant MAX_FEE = 1000; // 10% max
     uint256 public constant DISPUTE_PERIOD = 7 days;
     uint256 public constant AUTO_COMPLETE_PERIOD = 7 days;

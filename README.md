@@ -5,9 +5,9 @@ Secure escrow smart contract for the Gonana commodity marketplace, deployed on B
 ## Features
 
 ✅ **Secure Escrow System** - Holds funds until delivery confirmation  
-✅ **Auto-Complete** - Automatic release after 14 days  
+✅ **Auto-Complete** - Automatic release after 7 days  
 ✅ **Dispute Resolution** - Built-in dispute mechanism  
-✅ **Platform Fee** - 2.5% fee on completed orders  
+✅ **Platform Fee** - 5% fee on completed orders  
 ✅ **Pausable** - Emergency stop functionality  
 ✅ **Audit-Ready** - Uses OpenZeppelin security standards  
 
@@ -71,13 +71,13 @@ npx hardhat verify --network bscTestnet <CONTRACT_ADDRESS>
 - `pause()` / `unpause()` - Emergency controls
 
 ### Public:
-- `autoComplete(uint256 orderId)` - Auto-complete after 14 days
+- `autoComplete(uint256 orderId)` - Auto-complete after7 days
 - `getOrder(uint256 orderId)` - View order details
 
 ## Order Flow
 
 1. **Buyer creates order** → Funds locked in escrow
-2. **Seller marks shipped** → 14-day timer starts
+2. **Seller marks shipped** →7-day timer starts
 3. **Buyer confirms delivery** → Funds released (minus 5% fee)
 4. **OR auto-complete** → After 7 days, anyone can trigger release
 5. **OR dispute** → Owner resolves after 7 days
